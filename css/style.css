@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap');
+:root{
+    --primary:#0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow:0 8px 22px rgba(0,0,0,0.1);
+}
+html{
+    font-family: 'Sora', sans-serif ;
+}
+body{
+    line-height: 1.7;
+    color: var(--body);
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--dark);
+}
+.hero{
+    background-image: url(../img/cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+.intro-heading {
+    font-weight: 700;   
+}
+
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+.navbar .nav-link{
+    font-size: 20px;
+    font-weight: 700;
+}
+.btn{
+    padding: 14px 18px;
+    border-width: 2px ;
+}
+
+/* section  */
+.section{
+    padding: 120px 0;
+}
+.card-effect{
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all .25s ease-in;
+    border-radius: 5px;
+}
+.card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+.iconbox{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 50%;
+    flex: none;
+}
+.services{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.services::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all ease-in .3s;
+}
+.services:hover .iconbox,
+.services:hover .services-title,
+.services:hover .services-text{
+    color: #fff;
+}
+.services:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Features */
+.col-img{
+    background-image: url(../img/cover2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+.feature-icon{
+    background-color: var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex: none;
+    text-align: center;
+    
+}
+.feature-title{
+    color: var(--dark);
+}
+.features{
+    margin-bottom: 100px;
+}
+
+/* Product  */
+
+.product{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.product-img{
+    transition: all ease-in .3s;
+}
+.product-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all ease-in .3s;
+}
+.product-des{
+    position: absolute;
+    width: 100%;
+    display: none;
+    bottom: 30px;
+    transition: all ease-in .3s;
+}
+.product:hover .product-overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.product:hover .product-img{
+    transform: scale(1.2);
+}
+.product:hover .product-des{
+    display: block;
+}
+
+/* Offer  */
+.offer{
+    margin-top: 100px;
+}
+.offer-price{
+    line-height: 1;
+    color: var(--dark);
+}
+.offer-row{
+    transform: translateY(-6px);
+    transition: all ease-in .2s;
+    box-shadow: var(--box-shadow);    
+
+}
+.offer-row:hover{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.offer-detail-text{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.btn-custome{
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+/* Member  */
+
+.members{
+    margin-top: 100px;
+}
+.member-name{
+    color: var(--dark);
+}
+.img-member{
+    border-radius: 50%;
+}
+.member-socials >i{
+    display: inline-block;
+    padding-top:3px ;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    transition: all ease-in .2s;
+}
+.member-socials>i:hover{
+    background-color: #fff;
+    color: var(--primary);
+}
+/* Contact  */
+
+.contact{
+    margin-top: 100px;
+}
+.btn-contact{
+    border-radius: 0;
+    padding: 10px 0;
+}
+/* Footer  */
+
+.footer{
+    margin-top: 100px;
+    padding-top: 70px;
+}
+.footer-auth{
+    margin: 100px 0 0 0;
+}
